@@ -5,6 +5,15 @@ import express from 'express';
 
 const app = express();
 
+import cors from 'cors';
+
+// اجازه دسترسی از فرانت‌اند (GitHub Pages)
+app.use(cors({
+    origin: 'https://amindarestani2019.github.io', // جایگزین کن با URL فرانت‌اندت
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+}));
+
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
