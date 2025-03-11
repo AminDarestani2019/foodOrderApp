@@ -3,6 +3,7 @@ import Button from './UI/Button';
 import CartContext from '../store/CartContext.jsx';
 import { useContext } from 'react';
 import UserProgressContext from '../store/UserProgressContext.jsx';
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Header(){
     const userProgressCtx = useContext(UserProgressContext);
@@ -23,7 +24,10 @@ export default function Header(){
             <h1>REACTFood</h1>
         </div>
         <nav>
-            <Button textOnly onClick={handleShowCart}>Cart ({totalCartItems})</Button>
+            <Button textOnly onClick={handleShowCart}>
+                <FaShoppingCart /> 
+                <span>({totalCartItems})</span> {/* تعداد آیتم‌های سبد */}
+            </Button>
         </nav>
     </header>);
 }
