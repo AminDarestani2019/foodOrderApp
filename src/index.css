@@ -20,8 +20,20 @@ body {
   align-items: center;
   padding: 3rem 10%;
   max-width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-align: center;
+  flex-shrink: 1; 
+  min-width: 0;
+}
+
+#main-header nav {
+  flex-shrink: 0; 
+}
+
+@media (max-width: 600px) {
+  #main-header {
+    padding: 1.5rem 5%;
+  }
 }
 
 #main-header #title {
