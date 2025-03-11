@@ -18,16 +18,42 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
-  max-width: 100%;
+  padding: 1rem 5%;
+  max-width: 100vw;
   flex-wrap: nowrap;
   text-align: center;
   flex-shrink: 1; 
   min-width: 0;
+  overflow: hidden;
 }
 
 #main-header nav {
   flex-shrink: 0; 
+}
+
+@media (max-width: 768px) {
+  #main-header {
+    flex-direction: column; /* آیتم‌ها را به صورت ستونی نمایش دهد */
+    text-align: center;
+  }
+
+  #main-header #title {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #main-header img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #main-header h1 {
+    font-size: 1.2rem; /* کاهش سایز فونت در موبایل */
+  }
+
+  #main-header button {
+    font-size: 1rem; /* کاهش سایز فونت دکمه */
+  }
 }
 
 @media (max-width: 600px) {
@@ -51,6 +77,8 @@ body {
 }
 
 #main-header button {
+  max-width: fit-content;
+  white-space: nowrap; 
   font-size: 1.5rem;
   font-family: 'Lato', sans-serif;
 }
