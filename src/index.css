@@ -19,6 +19,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 10%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 #main-header #title {
